@@ -24,7 +24,20 @@
 # declarativa, ou seja, descrevendo o que quer visualizar, 
 # e não como desenhar cada parte.
 
+# Instalação do pacote:
+# install.packages("ggplot2")
 
+# Instalação do pacote dplyr para usar o dataframe starwars:
+# install.packages("dplyr")
+
+# Carregamento do pacote ggplot2.
+library(ggplot2)
+
+# Carregamento do pacote dplyr.
+library(dplyr)
+
+# Dataframe para testes com gráficos.
+head(starwars)
 
 
 
