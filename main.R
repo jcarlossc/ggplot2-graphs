@@ -38,8 +38,16 @@ library(dplyr)
 
 # Dataframe para testes com gráficos.
 head(starwars)
+View(starwars)
 
+# =============================
+# PRINCIPAIS TIPOS DE GRÁFICOS.
+# =============================
 
+# Gráfico de Dispersão.
+ggplot(starwars, aes(x = height, y = mass)) +
+  geom_point(color = "blue", size = 3) +
+  labs(title = "Relação entre Peso e altura dos personagens")
 
 
 
