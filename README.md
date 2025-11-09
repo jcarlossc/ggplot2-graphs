@@ -62,8 +62,8 @@ library(ggplot2)
 ## 📌 Clonar este repositório
 Abra o terminal e execute:
 ```bash
-git clone https://github.com/jcarlossc/ggplot2-graphs.git
-cd ggplot2-graphs
+git clone https://github.com/jcarlossc/ggplot2-graphics.git
+cd ggplot2-graphics
 ```
 
 ---
@@ -126,6 +126,7 @@ Este projeto está licenciado sob a MIT License.
 📌Twitter/X: https://x.com/jcarlossc1977
 
 ---
+
 
 
 
