@@ -49,6 +49,16 @@ Antes de rodar o projeto, você precisa ter:
 
 ---
 
+## 📌 biblioteca
+```r
+# Instalação.
+install.packages("ggplot2")
+# Execução.
+library(ggplot2)
+```
+
+---
+
 ## 📌 Clonar este repositório
 Abra o terminal e execute:
 ```bash
@@ -111,3 +121,4 @@ Este projeto está licenciado sob a MIT License.
 📌Twitter/X: https://x.com/jcarlossc1977
 
 ---
+
