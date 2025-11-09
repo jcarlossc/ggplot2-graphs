@@ -55,6 +55,59 @@ ggplot(dados, aes(x = Vendas, y = Lucro, color = Categoria, size = Clientes)) +
   labs(title = "Relação entre Vendas, Lucro e Clientes", x = "Vendas", y = "Lucro") +
   theme_bw()
 
+# Gráfico de Linhas.
+ggplot(dados, aes(x = Ano, y = Vendas, color = Categoria, group = Categoria)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 2) +
+  labs(title = "Evolução das Vendas por Categoria", x = "Ano", y = "Vendas") +
+  theme_light()
+
+# Gráfico de Barras.
+ggplot(dados, aes(x = Categoria, y = Vendas, fill = Categoria)) +
+  geom_col() +
+  labs(title = "Vendas Totais por Categoria", x = "Categoria", y = "Vendas") +
+  theme_minimal()
+
+# Boxplot.
+ggplot(dados, aes(x = Categoria, y = Lucro, fill = Categoria)) +
+  geom_boxplot() +
+  labs(title = "Distribuição de Lucros por Categoria", x = "Categoria", y = "Lucro") +
+  theme_classic()
+
+# Gráfico de Densidade.
+ggplot(dados, aes(x = Vendas, fill = Categoria)) +
+  geom_density(alpha = 0.5) +
+  labs(title = "Distribuição de Vendas por Categoria", x = "Vendas", y = "Densidade") +
+  theme_minimal()
+
+# Gráfico de Área.
+ggplot(dados, aes(x = Ano, y = Vendas, fill = Categoria)) +
+  geom_area(alpha = 0.6, position = "stack") +
+  labs(title = "Vendas Acumuladas por Categoria", x = "Ano", y = "Vendas") +
+  theme_light()
+
+# Gráfico Heatmap - mapa de calor.
+ggplot(dados, aes(x = Região, y = Categoria, fill = Vendas)) +
+  geom_tile(color = "white") +
+  labs(title = "Mapa de Calor de Vendas", x = "Região", y = "Categoria") +
+  scale_fill_gradient(low = "lightblue", high = "darkblue") +
+  theme_minimal()
+
+# Gráfico de Facetamento.
+ggplot(dados, aes(x = Mês, y = Vendas, fill = Categoria)) +
+  geom_col() +
+  facet_wrap(~ Região) +
+  labs(title = "Vendas Mensais por Região", x = "Mês", y = "Vendas") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+# Gráfico com Linha de Tendência.
+ggplot(dados, aes(x = Vendas, y = Lucro, color = Categoria)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, linetype = "dashed") +
+  labs(title = "Relação entre Vendas e Lucro com Tendência Linear") +
+  theme_minimal()
+
 
 
 
