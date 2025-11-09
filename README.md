@@ -86,6 +86,11 @@ renv::status()
 
 ---
 
+## 📌 Arquivo principal
+main.R
+
+---
+
 ## 📌 Sobre
 Este material foi criado para servir como introdução ao R, com exemplos simples e organizados para facilitar o aprendizado inicial.
 
@@ -121,4 +126,5 @@ Este projeto está licenciado sob a MIT License.
 📌Twitter/X: https://x.com/jcarlossc1977
 
 ---
+
 
