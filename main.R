@@ -27,27 +27,37 @@
 # Instalação do pacote:
 # install.packages("ggplot2")
 
-# Instalação do pacote dplyr para usar o dataframe starwars:
-# install.packages("dplyr")
-
 # Carregamento do pacote ggplot2.
 library(ggplot2)
 
-# Carregamento do pacote dplyr.
-library(dplyr)
+# Criar um dataframe completo e variado para testar
+# os gráficos do ggplot2.
+dados <- data.frame(
+  Ano = rep(2018:2023, each = 12),            # anos
+  Mês = rep(month.abb, times = 6),            # meses abreviados (Jan, Feb, ...)
+  Categoria = rep(c("Eletrônicos", "Roupas", "Alimentos"), each = 24), # 3 categorias
+  Região = rep(c("Norte", "Sul", "Leste", "Oeste"), times = 18),       # 4 regiões
+  Vendas = round(runif(72, 1000, 5000), 0),   # vendas aleatórias
+  Lucro = round(runif(72, 200, 1500), 0),     # lucro aleatório
+  Clientes = round(runif(72, 50, 300), 0)     # número de clientes
+)
 
-# Dataframe para testes com gráficos.
-head(starwars)
-View(starwars)
+head(dados)
+View(dados)
 
 # =============================
 # PRINCIPAIS TIPOS DE GRÁFICOS.
 # =============================
 
 # Gráfico de Dispersão.
-ggplot(starwars, aes(x = height, y = mass)) +
-  geom_point(color = "blue", size = 3) +
-  labs(title = "Relação entre Peso e altura dos personagens")
+ggplot(dados, aes(x = Vendas, y = Lucro, color = Categoria, size = Clientes)) +
+  geom_point(alpha = 0.7) +
+  labs(title = "Relação entre Vendas, Lucro e Clientes", x = "Vendas", y = "Lucro") +
+  theme_bw()
+
+
+
+
 
 
 
